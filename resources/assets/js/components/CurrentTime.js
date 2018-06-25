@@ -10,6 +10,10 @@ export default class CurrentTime extends Component {
     }
 
     componentDidMount() {
+        this.interval = setInterval(() => this.CurrentTime(), 1000);
+    }
+
+    CurrentTime() {
         fetch('/api/time')
         .then(response => {
             return response.json();

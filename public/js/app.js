@@ -55829,10 +55829,19 @@ var CurrentTime = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
+            this.interval = setInterval(function () {
+                return _this2.CurrentTime();
+            }, 1000);
+        }
+    }, {
+        key: 'CurrentTime',
+        value: function CurrentTime() {
+            var _this3 = this;
+
             fetch('/api/time').then(function (response) {
                 return response.json();
             }).then(function (objects) {
-                _this2.setState({ ctime: objects.date });
+                _this3.setState({ ctime: objects.date });
             });
         }
     }, {
