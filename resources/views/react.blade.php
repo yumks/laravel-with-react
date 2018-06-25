@@ -9,6 +9,7 @@
     <body>
         <div id="example"></div>
         <div id="currenttime"></div>
+        <div id="picture"></div>
         <script src="{{asset('js/app.js')}}" ></script>
     </body>
 </html>
